@@ -5,71 +5,364 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#171321">
-<title>Utsav & Bhakti</title>
+<meta name="description" content="Discover Hindu festivals, Bengali cultural celebrations, national occasions, book fairs and devotional experiences across Bangladesh.">
+<title>Utsav & Bhakti | Celebrate Together</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{
-  font-family:Arial,sans-serif;
-  background:#100f18;
-  color:#fff;
-  padding-bottom:85px;
+:root {
+  --bg: #100f18;
+  --surface: #1d1928;
+  --surface2: #252033;
+  --border: #393044;
+  --cream: #fff7e8;
+  --gold: #f2b66d;
+  --purple: #d9a9ff;
+  --pink: #ad5c7c;
+  --muted: #bcb5c6;
 }
-header{
-  padding:22px 18px;
-  background:#191624;
-  border-bottom:1px solid #332b40;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-.brand{font-size:25px;font-weight:bold;color:#ffbd70}
-.brand span{color:#d9a9ff}
-.tagline{font-size:12px;color:#aaa;margin-top:7px}
-.hero{padding:35px 20px;background:linear-gradient(135deg,#42234e,#a04c44)}
-.hero small{color:#ffdcac;letter-spacing:2px}
-.hero h1{font-size:32px;margin:15px 0}
-.hero p{line-height:1.6;color:#f5e8e8}
-.section{padding:23px 17px}
-.section h2{font-size:21px;margin-bottom:15px}
-.search{
- width:100%;padding:14px;border-radius:12px;
- border:1px solid #493b53;background:#211d2b;
- color:white;font-size:15px;margin-bottom:16px;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
 }
-.filters{display:flex;gap:9px;overflow-x:auto;padding-bottom:12px}
-.filter{
- border:1px solid #54445d;background:#211d2b;
- color:white;padding:9px 14px;border-radius:20px;
- white-space:nowrap;
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: white;
+  padding-bottom: 88px;
 }
-.filter.active{background:#a85a75;border-color:#a85a75}
-.card{
- background:#211d2b;border:1px solid #393044;
- border-radius:15px;padding:17px;margin-bottom:13px;
+
+/* HEADER */
+
+header {
+  padding: 19px 20px;
+  background: #191624;
+  border-bottom: 1px solid var(--border);
 }
-.card .emoji{font-size:30px;margin-bottom:10px}
-.card h3{margin-bottom:7px;font-size:17px}
-.card p{font-size:13px;color:#bcb5c6;line-height:1.6}
-.meta{color:#f5b878!important;margin-top:10px}
-.category{font-size:11px;color:#d6a8ff;margin-bottom:8px}
-.bhakti{
- background:linear-gradient(135deg,#42294f,#25203b);
- border:1px solid #62466c;border-radius:16px;padding:23px;
+
+.brand {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gold);
+  letter-spacing: -.7px;
 }
-.bhakti h2{color:#e6b5ff;margin-bottom:10px}
-.bhakti p{color:#d3c8dc;line-height:1.6;font-size:14px}
-.btn{
- display:inline-block;margin-top:16px;padding:11px 17px;
- border:0;border-radius:9px;background:#e9a36d;
- color:#251624;font-weight:bold;
+
+.brand span {
+  color: var(--purple);
 }
-footer{
- position:fixed;bottom:0;left:0;width:100%;
- background:#191624;border-top:1px solid #393044;
- display:flex;justify-content:space-around;
- padding:13px 5px;
+
+.tagline {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 7px;
 }
-footer a{color:#c7bdce;text-decoration:none;font-size:11px;text-align:center}
-footer a span{display:block;font-size:19px;margin-bottom:4px}
-.empty{color:#aaa;padding:15px 0}
+
+/* HERO */
+
+.hero {
+  padding: 40px 22px;
+  background: linear-gradient(135deg, #42234e, #a04c44);
+}
+
+.hero small {
+  color: #ffdcac;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 8vw, 39px);
+  line-height: 1.2;
+  margin: 17px 0;
+}
+
+.hero p {
+  line-height: 1.7;
+  color: #f5e8e8;
+  font-size: 16px;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 9px 14px;
+  background: #ffffff20;
+  border: 1px solid #ffffff40;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 25px 18px;
+}
+
+.section h2 {
+  font-size: 22px;
+  margin-bottom: 17px;
+}
+
+.section-subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: -9px;
+  margin-bottom: 17px;
+}
+
+/* SEARCH */
+
+.search {
+  width: 100%;
+  padding: 15px;
+  border-radius: 13px;
+  border: 1px solid #493b53;
+  background: var(--surface);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.search:focus {
+  border-color: var(--gold);
+}
+
+.search::placeholder {
+  color: #88818f;
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding-bottom: 13px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter {
+  flex-shrink: 0;
+  border: 1px solid #54445d;
+  background: var(--surface);
+  color: white;
+  padding: 11px 17px;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter.active {
+  background: var(--pink);
+  border-color: var(--pink);
+}
+
+/* FESTIVAL CARDS */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 19px;
+  margin-bottom: 14px;
+  transition: border-color .2s;
+}
+
+.card:active {
+  border-color: var(--gold);
+}
+
+.emoji {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.category {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: .7px;
+  color: var(--purple);
+  margin-bottom: 9px;
+}
+
+.card h3 {
+  font-size: 19px;
+  margin-bottom: 9px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.meta {
+  color: var(--gold) !important;
+  margin-top: 12px;
+  font-size: 13px !important;
+}
+
+.empty {
+  color: #aaa;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* BHAKTI */
+
+.bhakti {
+  background: linear-gradient(140deg, #42294f, #25203b);
+  border: 1px solid #62466c;
+  border-radius: 19px;
+  padding: 24px 20px;
+}
+
+.bhakti .symbol {
+  font-size: 35px;
+  margin-bottom: 13px;
+}
+
+.bhakti h2 {
+  color: #e6b5ff;
+  margin-bottom: 12px;
+}
+
+.bhakti p {
+  color: #d3c8dc;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.bhakti-features {
+  margin-top: 18px;
+  display: grid;
+  gap: 11px;
+}
+
+.bhakti-features div {
+  background: #ffffff0d;
+  border: 1px solid #ffffff15;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 13px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 19px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #251624;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ABOUT */
+
+.about-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.about-card h2 {
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.about-card p + p {
+  margin-top: 12px;
+}
+
+/* FOOTER */
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #191624;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  padding: 11px 4px calc(11px + env(safe-area-inset-bottom));
+  z-index: 100;
+}
+
+footer a {
+  color: #c7bdce;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  flex: 1;
+  padding: 3px;
+}
+
+footer a span {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+footer a.active {
+  color: var(--gold);
+}
+
+/* DESKTOP SUPPORT */
+
+@media (min-width: 700px) {
+  header {
+    padding: 24px 7%;
+  }
+
+  .hero {
+    padding: 65px 8%;
+  }
+
+  .section {
+    padding: 35px 8%;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  #festivalList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .card {
+    margin-bottom: 0;
+  }
+
+  footer {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
 </style>
 </head>
 
@@ -80,98 +373,376 @@ footer a span{display:block;font-size:19px;margin-bottom:4px}
   <div class="tagline">Celebrate Together. Discover Everything.</div>
 </header>
 
+<!-- HERO -->
+
 <section class="hero">
   <small>WELCOME TO UTSAV & BHAKTI</small>
+
   <h1>Every Celebration Has a Story.</h1>
-  <p>Discover festivals, explore traditions, find celebrations and connect with communities across Bangladesh.</p>
+
+  <p>
+    Discover Hindu festivals, explore Bengali traditions,
+    find cultural celebrations and connect with communities
+    across Bangladesh.
+  </p>
+
+  <div class="hero-tag">
+    ✨ Festivals · Culture · Devotion
+  </div>
 </section>
+
+<!-- FESTIVAL DISCOVERY -->
 
 <section class="section" id="home">
-  <h2>Discover Festivals ✨</h2>
-  <input class="search" id="search" placeholder="Search festivals..." oninput="render()">
 
-  <div class="filters">
-    <button class="filter active" onclick="setFilter('All',this)">All</button>
-    <button class="filter" onclick="setFilter('Religious',this)">Religious</button>
-    <button class="filter" onclick="setFilter('Cultural',this)">Cultural</button>
-    <button class="filter" onclick="setFilter('National',this)">National</button>
-    <button class="filter" onclick="setFilter('Social',this)">Social</button>
+  <h2>Discover Festivals ✨</h2>
+
+  <p class="section-subtitle">
+    Explore festivals, traditions and celebrations throughout the year.
+  </p>
+
+  <input
+    class="search"
+    id="search"
+    type="search"
+    placeholder="Search festivals and events..."
+    aria-label="Search festivals and events"
+  >
+
+  <div class="filters" aria-label="Festival categories">
+
+    <button class="filter active" data-filter="All" onclick="setFilter('All',this)">All</button>
+
+    <button class="filter" data-filter="Hindu" onclick="setFilter('Hindu',this)">Hindu Festivals</button>
+
+    <button class="filter" data-filter="Cultural" onclick="setFilter('Cultural',this)">Cultural</button>
+
+    <button class="filter" data-filter="National" onclick="setFilter('National',this)">National</button>
+
+    <button class="filter" data-filter="Public" onclick="setFilter('Public',this)">Public Events</button>
+
   </div>
 
-  <div id="festivalList"></div>
+  <div id="festivalList" aria-live="polite"></div>
+
 </section>
+
+<!-- BHAKTI -->
 
 <section class="section" id="bhakti">
+
   <div class="bhakti">
-    <h2>🙏 Explore Bhakti</h2>
-    <p>A dedicated space for devotion, Puja, temples, mandaps, spiritual traditions and religious communities.</p>
-    <button class="btn" onclick="alert('Bhakti section is coming soon!')">Explore Bhakti</button>
+
+    <div class="symbol">🙏</div>
+
+    <h2>Welcome to Bhakti</h2>
+
+    <p>
+      A dedicated space for Hindu devotion, Puja,
+      temples, mandaps, spiritual traditions and
+      devotional communities.
+    </p>
+
+    <div class="bhakti-features">
+
+      <div>🛕 Discover Puja Mandaps</div>
+
+      <div>📅 Explore Puja Calendar</div>
+
+      <div>⭐ Share Mandap Reviews</div>
+
+      <div>📸 Explore Festival Memories</div>
+
+    </div>
+
+    <button class="btn" onclick="alert('The Bhakti experience is coming soon!')">
+      Explore Bhakti
+    </button>
+
   </div>
+
 </section>
+
+<!-- ABOUT -->
 
 <section class="section" id="about">
-  <div class="card">
-    <h2>About Us</h2>
-    <p>Utsav & Bhakti is an inclusive community platform celebrating the diversity of festivals, traditions and devotional experiences.</p>
-    <p style="margin-top:12px">Made with ❤️ for everyone.</p>
+
+  <div class="about-card">
+
+    <h2>About Utsav & Bhakti</h2>
+
+    <p>
+      Utsav & Bhakti is a community-powered platform
+      dedicated to Hindu festivals, Bengali culture,
+      national celebrations and devotional experiences.
+    </p>
+
+    <p>
+      Our mission is to help people discover celebrations,
+      explore traditions and connect with communities
+      across Bangladesh.
+    </p>
+
+    <p>
+      Made with ❤️ for culture, tradition and community.
+    </p>
+
   </div>
+
 </section>
 
+<!-- MOBILE NAVIGATION -->
+
 <footer>
-  <a href="#home"><span>🏠</span>Home</a>
-  <a href="#home"><span>📅</span>Festivals</a>
-  <a href="#bhakti"><span>🙏</span>Bhakti</a>
-  <a href="#about"><span>👤</span>About</a>
+
+  <a href="#home" class="active">
+    <span>🏠</span>Home
+  </a>
+
+  <a href="#home">
+    <span>📅</span>Festivals
+  </a>
+
+  <a href="#bhakti">
+    <span>🙏</span>Bhakti
+  </a>
+
+  <a href="#about">
+    <span>👤</span>About
+  </a>
+
 </footer>
 
 <script>
+
+/* FESTIVAL DATABASE */
+
 const festivals = [
- {name:"Durga Puja",emoji:"🪔",type:"Religious",date:"Seasonal celebration",desc:"Discover Puja celebrations, mandaps and traditions."},
- {name:"Eid-ul-Fitr",emoji:"🌙",type:"Religious",date:"Date varies by lunar calendar",desc:"Celebrate togetherness, joy and generosity."},
- {name:"Pohela Boishakh",emoji:"🎊",type:"Cultural",date:"14 April",desc:"Welcome the Bengali New Year with colour and culture."},
- {name:"Eid-ul-Adha",emoji:"🌙",type:"Religious",date:"Date varies by lunar calendar",desc:"Explore the traditions and celebrations of Eid."},
- {name:"Language Martyrs' Day",emoji:"🌺",type:"National",date:"21 February",desc:"Remember the sacrifices for the Bengali language."},
- {name:"Kali Puja",emoji:"🪔",type:"Religious",date:"Seasonal celebration",desc:"Explore devotion and the traditions of Kali Puja."},
- {name:"Buddha Purnima",emoji:"☸️",type:"Religious",date:"Date varies",desc:"Discover Buddhist traditions and celebrations."},
- {name:"Christmas",emoji:"🎄",type:"Religious",date:"25 December",desc:"Celebrate peace, joy and togetherness."},
- {name:"Book Fair",emoji:"📚",type:"Cultural",date:"February",desc:"Explore literature, authors and cultural events."}
+
+  {
+    name: "Durga Puja",
+    emoji: "🪔",
+    type: "Hindu",
+    date: "September–October",
+    desc: "Discover Durga Puja celebrations, beautiful mandaps, cultural programmes and traditions."
+  },
+
+  {
+    name: "Kali Puja",
+    emoji: "🪔",
+    type: "Hindu",
+    date: "October–November",
+    desc: "Explore the devotion, celebrations and traditions of Kali Puja."
+  },
+
+  {
+    name: "Saraswati Puja",
+    emoji: "🌼",
+    type: "Hindu",
+    date: "January–February",
+    desc: "Celebrate the goddess of knowledge, learning, music and wisdom."
+  },
+
+  {
+    name: "Lakshmi Puja",
+    emoji: "🪷",
+    type: "Hindu",
+    date: "September–October",
+    desc: "Discover the traditions and devotion surrounding Lakshmi Puja."
+  },
+
+  {
+    name: "Janmashtami",
+    emoji: "🦚",
+    type: "Hindu",
+    date: "August–September",
+    desc: "Celebrate the birth of Lord Krishna through devotion and cultural traditions."
+  },
+
+  {
+    name: "Rath Yatra",
+    emoji: "🛕",
+    type: "Hindu",
+    date: "June–July",
+    desc: "Discover the grand chariot festival and its traditional celebrations."
+  },
+
+  {
+    name: "Diwali",
+    emoji: "🪔",
+    type: "Hindu",
+    date: "October–November",
+    desc: "Explore the festival of lights, traditional decorations and celebrations."
+  },
+
+  {
+    name: "Holi",
+    emoji: "🎨",
+    type: "Hindu",
+    date: "February–March",
+    desc: "Celebrate colours, joy and the arrival of spring."
+  },
+
+  {
+    name: "Pohela Boishakh",
+    emoji: "🎊",
+    type: "Cultural",
+    date: "14 April",
+    desc: "Welcome the Bengali New Year with colourful celebrations, music and traditions."
+  },
+
+  {
+    name: "Nabanna",
+    emoji: "🌾",
+    type: "Cultural",
+    date: "November–December",
+    desc: "Celebrate the Bengali harvest season, new rice and traditional culture."
+  },
+
+  {
+    name: "Language Martyrs' Day",
+    emoji: "🌺",
+    type: "National",
+    date: "21 February",
+    desc: "Remember the language movement and honour the sacrifices for Bangla."
+  },
+
+  {
+    name: "Independence Day",
+    emoji: "🇧🇩",
+    type: "National",
+    date: "26 March",
+    desc: "Remember the history and spirit of Bangladesh's independence."
+  },
+
+  {
+    name: "Victory Day",
+    emoji: "🇧🇩",
+    type: "National",
+    date: "16 December",
+    desc: "Celebrate the victory and honour the history of Bangladesh."
+  },
+
+  {
+    name: "Ekushey Book Fair",
+    emoji: "📚",
+    type: "Public",
+    date: "February",
+    desc: "Explore books, literature, authors, publishers and cultural programmes."
+  },
+
+  {
+    name: "International Trade Fair",
+    emoji: "🏛️",
+    type: "Public",
+    date: "Seasonal event",
+    desc: "Discover exhibitions, businesses, products and trade events."
+  }
+
 ];
 
-let currentFilter="All";
+let currentFilter = "All";
 
-function setFilter(type,button){
- currentFilter=type;
- document.querySelectorAll(".filter").forEach(b=>b.classList.remove("active"));
- button.classList.add("active");
- render();
+/* CATEGORY FILTER */
+
+function setFilter(type, button) {
+
+  currentFilter = type;
+
+  document.querySelectorAll(".filter").forEach(btn => {
+    btn.classList.remove("active");
+  });
+
+  button.classList.add("active");
+
+  render();
+
 }
 
-function render(){
- const query=document.getElementById("search").value.toLowerCase();
- const results=festivals.filter(f=>
- (currentFilter==="All"||f.type===currentFilter)&&
- (f.name.toLowerCase().includes(query)||f.desc.toLowerCase().includes(query))
- );
+/* SEARCH AND DISPLAY */
 
- const list=document.getElementById("festivalList");
+function render() {
 
- if(!results.length){
- list.innerHTML='<p class="empty">No festivals found. Try another search.</p>';
- return;
- }
+  const query = document
+    .getElementById("search")
+    .value
+    .trim()
+    .toLowerCase();
 
- list.innerHTML=results.map(f=>`
- <div class="card">
- <div class="emoji">${f.emoji}</div>
- <div class="category">${f.type.toUpperCase()}</div>
- <h3>${f.name}</h3>
- <p>${f.desc}</p>
- <p class="meta">📅 ${f.date}</p>
- </div>
- `).join("");
+  const results = festivals.filter(f => {
+
+    const matchesCategory =
+      currentFilter === "All" ||
+      f.type === currentFilter;
+
+    const matchesSearch =
+      f.name.toLowerCase().includes(query) ||
+      f.desc.toLowerCase().includes(query) ||
+      f.type.toLowerCase().includes(query);
+
+    return matchesCategory && matchesSearch;
+
+  });
+
+  const list = document.getElementById("festivalList");
+
+  if (results.length === 0) {
+
+    list.innerHTML =
+      '<p class="empty">No events found. Try another search.</p>';
+
+    return;
+
+  }
+
+  list.innerHTML = results.map(f => `
+
+    <article class="card">
+
+      <div class="emoji">${f.emoji}</div>
+
+      <div class="category">
+        ${f.type.toUpperCase()}
+      </div>
+
+      <h3>${f.name}</h3>
+
+      <p>${f.desc}</p>
+
+      <p class="meta">📅 ${f.date}</p>
+
+    </article>
+
+  `).join("");
+
 }
+
+/* SEARCH LISTENER */
+
+document
+  .getElementById("search")
+  .addEventListener("input", render);
+
+/* BOTTOM NAVIGATION */
+
+document.querySelectorAll("footer a").forEach(link => {
+
+  link.addEventListener("click", function() {
+
+    document.querySelectorAll("footer a").forEach(item => {
+      item.classList.remove("active");
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
+
+/* INITIALIZE */
 
 render();
+
 </script>
 
 </body>
